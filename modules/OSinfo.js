@@ -1,4 +1,5 @@
-var os = require('os')
+var os = require('os');
+var timeInfo = require('./time.js');
 
 function getOSinfo() {
 	var type = os.type();
@@ -10,7 +11,6 @@ function getOSinfo() {
 
 	var release = os.release();
 	var cpu = os.cpus()[0].model;
-	var timeInfo = require('../modules/time.js');
 	var userInfo = os.userInfo();
 
 	console.log('System:', type);
