@@ -5,7 +5,11 @@ function getTime() {
 	let hours = Math.floor(uptime / 3600);
 	let minutes = Math.floor((uptime - (hours * 3600)) / 60);
 	let seconds = uptime % 60;
-	return hours + ' hours ' + minutes + ' minutes ' + uptime + ' seconds'
+	if (hours == 0) {
+		return minutes + ' minutes ' + seconds + ' seconds'
+	} else {
+		return hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds'
+	}
 }
 
 exports.time = getTime;
